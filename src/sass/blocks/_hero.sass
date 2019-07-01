@@ -1,0 +1,46 @@
+.hero
+  // padding-top: 50px
+  // padding-bottom: 50px
+  &-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__img
+    flex-basis: 45%
+    display: block
+    max-width: 540px
+    border-radius: 4px
+  &-text
+    flex-basis: 45%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &__title
+      font-size: 28px
+      color: $color-text
+      +boldRoboto
+      margin: 0
+      padding-bottom: 40px
+    &__desc
+      font-size: 20px
+      color: $color-text
+      +coming
+      line-height: 25px
+      & p
+        margin-top: 35px
+        margin-bottom: 10px
+        font-size: 16px
+      & ul 
+        list-style: none
+        padding: 0
+        +boldComing
+        text-transform: capitalize
+        & li
+          padding-bottom: 5px
+          font-size: 18px
+    &__buttons
+      margin-top: 40px
+      display: flex
+      justify-content: space-between
+    &__button
+      width: 260px

@@ -1,0 +1,96 @@
+*
+  box-sizing: border-box
+  font-family: 'Open Sans', sans-serif
+
+body
+  position: relative
+  transition: 0.5s
+
+section
+  padding-top: 70px
+  padding-bottom: 70px
+
+.container
+  width: 1200px
+  margin-left: auto
+  margin-right: auto
+
+.normal
+  display: flex
+
+.button
+  cursor: pointer
+  padding: 20px
+  font-size: 19px
+  +boldRoboto
+  background: 0
+  border-radius: 10px
+  border: 0
+  transition: 0.5s
+  transform: scale(1)
+.btn-primary 
+  color: #007bff
+  border: 1px solid #007bff
+.btn-success
+  color: #28a745
+  border: 1px solid #28a745
+
+button, input:focus
+  outline: none  
+
+.title
+  text-align: center
+  display: block
+  margin: 0 auto 0 auto
+  text-align: center
+  font-size: 28px
+  +boldRoboto
+.subtitle
+  text-align: center
+  display: block
+  margin: 30px auto 40px auto
+  text-align: center
+  max-width: 550px
+  +roboto
+
+.min-photo
+  display: block
+  width: 100px
+  height: 100px
+  border-radius: 50%
+
+// HOVER
+@media (min-width: 1200px)
+  .header-contacts__item:hover
+    color: #fff
+  .header-contacts__item:nth-child(1):hover
+    background: #4a76a8
+  .header-contacts__item:nth-child(2):hover
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)
+  .header-contacts__item:nth-child(3):hover
+    background: #3578E5
+  .btn-primary:hover
+    background: #007bff
+    color: #fff
+    transform: scale(1.03)
+    box-shadow: 0 0 7px 2px #618ef3
+  .btn-success:hover
+    background: #28a745
+    color: #fff
+    transform: scale(1.03)
+    box-shadow: 0 0 7px 2px #37f734
+  .portfolio-card:hover
+    transform: scale(1.04)
+    z-index: 99
+    box-shadow: 0 0 50px 5px #1d1d1d
+    .portfolio-card__desc
+      display: block
+  .portfolio-item__item:hover
+    box-shadow: 0 0 10px 2px rgba(0, 123, 255, 0.42)
+  .callback-text__button:hover
+    box-shadow: 0 0 30px 5px #cccccc
+    transform: scale(1.05)
+  .footer-contacts__item:hover
+    background: #fff
+    & i
+      color: #0e0d1f

@@ -1,0 +1,39 @@
+.header
+  padding-top: 30px
+  padding-bottom: 50px
+  &-block
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-logo
+    display: flex
+    align-items: center
+    &__img
+      margin-right: 25px
+    &__my-name
+      display: block
+      font-size: 30px
+      color: $color-text
+      +boldRoboto
+      padding-bottom: 15px
+    &__desc
+      display: block
+      font-size: 18px
+      color: $color-text
+      +coming
+  &-contacts
+    display: flex
+    &__item
+      cursor: pointer
+      margin-left: 25px
+      display: flex
+      width: 50px
+      height: 50px
+      border-radius: 5px
+      justify-content: center
+      align-items: center
+      text-align: center
+      transition: 0.4s
+      i
+        font-size: 32px
+        display: block

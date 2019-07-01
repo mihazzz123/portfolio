@@ -1,0 +1,58 @@
+.portfolio-card__desc
+  animation: descCard-anim 400ms 0.2s forwards ease-out
+  opacity: 0
+
+  @keyframes descCard-anim
+    0%
+      opacity: 0.1
+      transform: translateY(300px)
+    100%
+      opacity: 1
+      transform: translateY(0px)
+      
+.portfolio-item
+  // height: 750px
+  // animation: overflow 1ms 0.8s forwards
+  animation: close 0.8s forwards
+  @keyframes overflow
+    0%
+      overflow: hidden
+      height: 80px
+      width: 400px
+    100%
+      overflow: visible
+      height: 600px
+      width: 100%
+  @keyframes close
+    0%
+      height: 600px
+      overflow: visible
+    100%
+      overflow: hidden
+      height: 80px
+.portfolio-item__arrow
+  // animation: arrow 0.4s forwards
+  animation: arrowClose 0.4s 
+  @keyframes arrow
+    0%
+      transform: rotate(0deg)
+    100%
+      transform: rotate(180deg)
+  @keyframes arrowClose
+    0%
+      transform: rotate(180deg)
+    100%
+      transform: rotate(0deg)
+.portfolio-cards
+  opacity: 1
+  padding-bottom: 80px
+  display: flex
+  animation: card-anim 0.7s forwards ease-out
+  // @keyframes card-anim
+  //   0%
+  //     transform: translateY(-550px)
+  //   100%
+  //     transform: translateY(0px)
+
+
+

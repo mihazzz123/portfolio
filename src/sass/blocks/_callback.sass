@@ -1,0 +1,77 @@
+.callback
+  // padding-top: 50px
+  // padding-bottom: 50px
+  &__title
+    margin-bottom: 80px
+  &-block
+    display: flex
+    // align-items: center
+    justify-content: space-between
+  &-text
+    flex-basis: 45%
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__desc
+      font-size: 24px
+      +coming
+      color: $color-text
+      line-height: 40px
+      & a 
+        cursor: default
+        text-decoration: none
+        color: $color-text
+    &__buttons
+      margin-top: 80px
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+    &__button
+      margin-right: 20px
+      margin-bottom: 30px
+      width: 130px
+      color: #fff
+      &:nth-child(1)
+        background: #4a76a8
+      &:nth-child(2)
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)
+      &:nth-child(3)
+        background: #db3738
+        margin-right: 0
+      &:last-child 
+        background: #32adb9
+        width: 300px
+  &-form-block
+    flex-basis: 45%
+  &-form
+    border-radius: 5px
+    box-shadow: 0 0 30px 5px #cccccc
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding-bottom: 40px
+    &__title
+      +boldComing
+      font-size: 20px
+      text-align: center
+      padding-top: 40px
+      padding-bottom: 40px
+    &__input
+      font-size: 18px
+      border: 1px solid #007bff66
+      border-radius: 5px
+      padding: 20px
+      margin-bottom: 30px
+      color: gray
+      width: 350px
+    &__textarea
+      padding: 10px 20px
+      min-height: 100px
+      color: gray
+    &__button
+      border: 1px solid #007bff66
+      width: 350px
+
+      
