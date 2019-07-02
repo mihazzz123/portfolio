@@ -7,6 +7,9 @@ $(document).ready(function() {
   var works3 = $('.portfolio-cards__3');
   var placeholder = 'Какой у Вас проект? \nКакая у Вас задача? \nКакой сайт Вам нужно сделать?';
 
+  new WOW().init();
+
+  
   showWorks1.click(function() {
     $(this).toggleClass('active');
     if($(this).hasClass('active')) {
@@ -104,33 +107,83 @@ $(document).ready(function() {
 
   
   // Модальное окно
-  $('.open-modal').click(function () {
-    $('.modal').addClass('modal-active');
-    // Слайдер-модальноо окна
-    $('.slider-for').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: true,
-      asNavFor: '.slider-nav'
-    });
-    $('.slider-nav').slick({
-      slidesToShow: 4,
-      slidesToScroll: 4,
-      asNavFor: '.slider-for',
-      dots: true,
-      // centerMode: true,
-      focusOnSelect: true
-    });
+  var openModal = $('.open-modal');
+  var modal = $('.modal');
+  var openModal1 = $('.open-modal_1');
+  var modal1 = $('.modal_1');
+  var openModal2 = $('.open-modal_2');
+  var modal2 = $('.modal_2');
+  var openModal3 = $('.open-modal_3');
+  var modal3 = $('.modal_3');
+  var openModal4 = $('.open-modal_4');
+  var modal4 = $('.modal_4');
+
+  openModal1.click(function () {
+    modal1.addClass('modal-active');
+    modal1.css({'display' : 'block'});
+    $('body').css({'overflow' : 'hidden'});
+  });
+  openModal2.click(function () {
+    modal2.addClass('modal-active');
+    modal2.css({'display' : 'block'});
+    $('body').css({'overflow' : 'hidden'});
+  });
+  openModal3.click(function () {
+    modal3.addClass('modal-active');
+    modal4.css({'display' : 'block'});
+    $('body').css({'overflow' : 'hidden'});
+  });
+  openModal4.click(function () {
+    modal4.addClass('modal-active');
+    modal4.css({'display' : 'block'});
+    $('body').css({'overflow' : 'hidden'});
+  });
+  
+  
+    
+  $('.close').on('click', function () { 
+      modal.removeClass('modal-active');
+      $('body').attr('style', '');
   });
 
-  $('#close').click(function () { 
-    // $('.modal').css({'animation' : 'close-modal 0.3s 0s 1 forwards'});
-    setTimeout(function () {
-      $('.modal').removeClass('modal-active');
-      $('.modal').attr('style', '');
-    }, 300);
+
+   //Кнопка на верх
+   $(window).scroll(function () { 
+    if($(this).scrollTop() != 0){
+    $('#go-top').fadeIn();
+    } else {
+    $('#go-top').fadeOut();
+    }
+    });
+    $('#go-top').click(function() {
+    $('body,html').animate({scrollTop:0},900);
   });
 
+  //Scroll
+  $(document).on("click","a", function (event) {
+    //отменяем стандартную обработку нажатия по ссылке
+    event.preventDefault();
+    //забираем идентификатор бока с атрибута href
+    var id  = $(this).attr('href'),
+    //узнаем высоту от начала страницы до блока на который ссылается якорь
+    top = $(id).offset().top;
+    //анимируем переход на расстояние - top за 1500 мс
+    $('body,html').animate({scrollTop: top}, 1000);
+  });
 
+    //Отправка формы
+    $("#main-form").submit(function() {
+      $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: $(this).serialize()
+      }).done(function() {
+        $(this).find("input").val("");
+        $("#main-form").trigger("reset");
+        $('.modal-wrap').removeClass('modal-wrap__disable').addClass('modal-wrap__active');
+        $('.modal-first').addClass('modal-first__active');
+      });
+      return false;
+      });
+  
 });

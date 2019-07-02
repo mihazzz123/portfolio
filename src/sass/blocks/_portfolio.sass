@@ -1,90 +1,121 @@
 .portfolio
+  background-color: #ececec
   // padding-top: 50px
   // padding-bottom: 50px
   &__title
   &__subtitle
+    margin-top: 20px
+    margin-bottom: 80px
+    font-size: 12px
   &-block
     margin: 0 auto 0 auto
-  &-item
-    margin: 0 auto 10px auto
-    // background: #5db0f785
-    margin-bottom: 10px
-    transition: all 0.8s
-    // height: 95px 
-    position: relative
-    overflow: hidden
-    border-radius: 10px
-    padding-left: 10px
-    padding-right: 10px
-    height: 80px
-    width: 450px
-    box-shadow: inset 0 0 5px 1px rgba(0, 123, 255, 0.42)
-    &__name
-      margin: 0 auto 0 auto
-      height: 80px
-      // border: 1px solid #007bff
-      border-radius: 15px
-      max-width: 500px
-      transition: all 0.4s
-    &__title
-      font-size: 22px
-      max-width: 300px
-      cursor: pointer
-      display: block
-      margin: 0 auto 0 auto
-      padding-bottom: 10px
-      padding-top: 15px
-      text-align: center
-      +boldRoboto
-      font-size: 24px
-    &__arrow
-      cursor: pointer
-      display: block
-      margin: 0 auto 0 auto
-      // padding-bottom: 20px
-      text-align: center
-      position: absolute
-      bottom: 10px
-      right: 48.5%
-      & i
-        font-size: 36px
-        color: $color-text
-  &-cards
-    display: none
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
     justify-content: space-between
-    margin-top: 40px
-    transition: all 0.6s
-    // opacity: 0
+  // &-item
+  //   margin: 0 auto 10px auto
+  //   // background: #5db0f785
+  //   margin-bottom: 10px
+  //   transition: all 0.8s
+  //   // height: 95px 
+  //   position: relative
+  //   overflow: hidden
+  //   border-radius: 10px
+  //   padding-left: 10px
+  //   padding-right: 10px
+  //   height: 80px
+  //   width: 450px
+  //   box-shadow: inset 0 0 5px 1px rgba(0, 123, 255, 0.42)
+  //   &__name
+  //     margin: 0 auto 0 auto
+  //     height: 80px
+  //     // border: 1px solid #007bff
+  //     border-radius: 15px
+  //     max-width: 500px
+  //     transition: all 0.4s
+  //   &__title
+  //     font-size: 22px
+  //     max-width: 300px
+  //     cursor: pointer
+  //     display: block
+  //     margin: 0 auto 0 auto
+  //     padding-bottom: 10px
+  //     padding-top: 15px
+  //     text-align: center
+  //     +boldRoboto
+  //     font-size: 24px
+    // &__arrow
+    //   cursor: pointer
+    //   display: block
+    //   margin: 0 auto 0 auto
+    //   // padding-bottom: 20px
+    //   text-align: center
+    //   position: absolute
+    //   bottom: 10px
+    //   right: 48.5%
+    //   & i
+    //     font-size: 36px
+    //     color: $color-text
+  // &-cards
+  //   display: none
+  //   justify-content: space-between
+  //   margin-top: 40px
+  //   transition: all 0.6s
+  //   // opacity: 0
   &-card
     transform: scale(1)
     transition: all 0.6s
     text-align: center
     align-items: center
-    max-width: 385px
+    max-width: 30%
     width: 100%
     position: relative
-    height: 370px
+    height: 470px
     overflow: hidden
-    box-shadow: 0 0 10px 1px #1d1d1d3d
+    box-shadow: 0 5px 10px 1px #bfbfbf6e
+    margin-bottom: 40px
     &__text
       background: #fff
       height: 100%
       width: 100%
     &__title
       display: block
+      position: relative
       +boldComing
       font-size: 22px
       padding-top: 30px
-      padding-bottom: 15px
+      padding-bottom: 25px
+      &:after
+        content: ""
+        display: block
+        position: absolute
+        bottom: 5px
+        left: calc(50% - 20px)
+        width: 40px
+        height: 2px
+        background: $color-main
     &__subtitle
       display: block
       +coming
       font-size: 16px 
       padding-bottom: 10px
+      width: 80%
+      margin: 0 auto
+      &:after
+        content: ""
+        display: block
+        position: absolute
+        bottom: 20px
+        left: calc(50% - 20px)
+        width: 40px
+        height: 2px
+        background: $color-main
     &__img
       display: block
       width: 100%
-      height: 250px
+      height: 320px
+      border-bottom: 1px solid #80808045
     &__desc
       display: none
       position: absolute

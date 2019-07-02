@@ -10,6 +10,28 @@ section
   padding-top: 70px
   padding-bottom: 70px
 
+a
+  text-decoration: none
+  color: $color-text
+
+#go-top
+  display: none
+  width: 50px
+  height: 50px
+  position: fixed
+  bottom: 20px
+  right: 5%
+  z-index: 9999
+  border-radius: 50%
+  border: 0
+  box-shadow: 0 0 30px 10px #555555
+  padding: 0
+  background-color: 0
+  opacity: 0.25
+  transform: 0.4s
+  & i
+    font-size: 34px
+
 .container
   width: 1200px
   margin-left: auto
@@ -35,7 +57,7 @@ section
   color: #28a745
   border: 1px solid #28a745
 
-button, input:focus
+button, input:focus, button, input:hover
   outline: none  
 
 .title
@@ -61,6 +83,10 @@ button, input:focus
 
 // HOVER
 @media (min-width: 1200px)
+  #go-top
+    display: block
+  #go-top:hover
+    opacity: 0.8
   .header-contacts__item:hover
     color: #fff
   .header-contacts__item:nth-child(1):hover
@@ -80,17 +106,79 @@ button, input:focus
     transform: scale(1.03)
     box-shadow: 0 0 7px 2px #37f734
   .portfolio-card:hover
-    transform: scale(1.04)
+    transform: scale(1.02)
     z-index: 99
-    box-shadow: 0 0 50px 5px #1d1d1d
+    box-shadow: 0 0 15px 5px #67666675
     .portfolio-card__desc
       display: block
   .portfolio-item__item:hover
     box-shadow: 0 0 10px 2px rgba(0, 123, 255, 0.42)
   .callback-text__button:hover
     box-shadow: 0 0 30px 5px #cccccc
+  .callback-form__button:hover
+    background: #99caff7a
     transform: scale(1.05)
   .footer-contacts__item:hover
     background: #fff
     & i
       color: #0e0d1f
+
+
+.portfolio-card__desc
+  animation: descCard-anim 400ms 0.2s forwards ease-out
+  opacity: 0
+
+  @keyframes descCard-anim
+    0%
+      opacity: 0.1
+      transform: translateY(300px)
+    100%
+      opacity: 1
+      transform: translateY(0px)
+      
+.portfolio-item
+  // height: 750px
+  // animation: overflow 1ms 0.8s forwards
+  animation: close 0.8s forwards
+  @keyframes overflow
+    0%
+      overflow: hidden
+      height: 80px
+      width: 400px
+    100%
+      overflow: visible
+      height: 600px
+      width: 100%
+  @keyframes close
+    0%
+      height: 600px
+      overflow: visible
+    100%
+      overflow: hidden
+      height: 80px
+.portfolio-item__arrow
+  // animation: arrow 0.4s forwards
+  animation: arrowClose 0.4s 
+  @keyframes arrow
+    0%
+      transform: rotate(0deg)
+    100%
+      transform: rotate(180deg)
+  @keyframes arrowClose
+    0%
+      transform: rotate(180deg)
+    100%
+      transform: rotate(0deg)
+.portfolio-cards
+  opacity: 1
+  padding-bottom: 80px
+  display: flex
+  animation: card-anim 0.7s forwards ease-out
+  // @keyframes card-anim
+  //   0%
+  //     transform: translateY(-550px)
+  //   100%
+  //     transform: translateY(0px)
+
+
+ 
