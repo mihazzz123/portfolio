@@ -14,7 +14,7 @@
     left: 0
     background-image: url(../img/hero/hero_bg.jpg)
     background-size: cover
-    background-position: center top
+    background-position: center bottom
   &-block
     display: flex
     justify-content: space-between
@@ -31,6 +31,7 @@
     height: 630px
     flex-direction: column
     justify-content: center
+    padding-right: 40px
     &__title
       display: block
       font-size: 34px
@@ -64,3 +65,34 @@
     &__button
       text-align: center
       width: 260px
+      display: flex
+      align-items: center
+      justify-content: center
+
+@media (max-width: 1200px)
+  .hero
+    height: 100%
+    &__img
+      flex-basis: 50%
+    &-text
+      &__buttons
+        flex-wrap: wrap
+      &__button
+        width: 45%
+        padding: 10px
+@media (max-width: 997px)
+  .hero
+    &:after
+      filter: blur(3px)
+      filter: brightness(40%)
+    &-block
+      flex-wrap: wrap
+      text-align: center
+    &__img
+      flex-basis: 90%
+      margin: 0 auto
+    &-text
+      flex-basis: 90%
+      padding: 0
+      margin: 0 auto
+// @media (max-width: 786px)

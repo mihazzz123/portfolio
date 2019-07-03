@@ -68,8 +68,8 @@
     transition: all 0.6s
     text-align: center
     align-items: center
-    max-width: 30%
-    width: 100%
+    max-width: 370px
+    width: 30%
     position: relative
     height: 470px
     overflow: hidden
@@ -136,3 +136,34 @@
         color: #fff
         border: 1px solid #007bff
         background: #007bff99
+
+@media (max-width: 1200px)
+  .portfolio
+    &-block
+      justify-content: space-around
+    &-card 
+      max-width: 400px
+      width: 47%
+      &__title
+        font-size: 20px
+        margin-bottom: 7px
+      &__subtitle
+        font-size: 14px
+@media (max-width: 997px)
+  .portfolio
+    &-card 
+      width: 47%
+@media (max-width: 768px)
+  .portfolio
+    &-card 
+      width: 90%
+@media (max-width: 546px)
+  .portfolio
+    &-card 
+      max-width: 300px
+      width: 90%
+      &__title
+        font-size: 18px
+        margin-bottom: 7px
+      &__subtitle
+        font-size: 12px
