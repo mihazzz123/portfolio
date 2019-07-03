@@ -160,7 +160,8 @@ $(document).ready(function() {
   });
 
   //Scroll
-  $(document).on("click","a", function (event) {
+  
+  $(document).on('click','.link' , function (event) {
     //отменяем стандартную обработку нажатия по ссылке
     event.preventDefault();
     //забираем идентификатор бока с атрибута href

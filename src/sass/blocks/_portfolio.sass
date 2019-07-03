@@ -138,6 +138,11 @@
         background: #007bff99
 
 @media (max-width: 1200px)
+  .portfolio
+    &__title
+      margin-bottom: 40px
+    &__subtitle
+      display: none
   .portfolio-card
     height: 500px
     &__title
@@ -147,14 +152,14 @@
     &__subtitle
       padding-bottom: 10px
       &:after
-        bottom: 60px
+        display: none
     &__desc
       display: block
       height: 30px
       position: absolute
       background: none
       margin-top: 0
-      bottom: 30px
+      bottom: 40px
       &-tag 
         display: none
       &-buttons

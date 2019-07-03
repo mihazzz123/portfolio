@@ -1,9 +1,19 @@
 .callback
-  background-image: url(../img/callback/callback_bg.jpg)
-  background-size: cover
-  background-position: center bottom
+  position: relative
   // padding-top: 50px
   // padding-bottom: 50px
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    top: 0
+    width: 100%
+    height: 100%
+    background-image: url(../img/callback/callback_bg.jpg)
+    background-size: cover
+    background-position: center bottom
+    z-index: -99
+    filter: brightness(80%)
   &__title
     margin-bottom: 80px
     color: $color-text-second
@@ -124,6 +134,9 @@
         font-size: 20px
       &__button
         width: 300px
+        margin-right: 0
+      &__button:nth-child(3)
+        margin-right: 0
     &-form-block
       max-width: 370px
     &-form 
