@@ -7,6 +7,7 @@
   &__title
     margin-bottom: 80px
     color: $color-text-second
+    text-shadow: 0px 0px 14px rgba(0, 0, 0, 0), 0px 0px 5px rgb(0, 0, 0)
   &-block
     display: flex
     // align-items: center
@@ -20,10 +21,12 @@
       font-size: 24px
       +coming
       color: $color-text-second
+      text-shadow: 0px 0px 10px rgba(27, 22, 22, 0.78), 0px 0px 5px rgba(0, 0, 0, 0.78)
       line-height: 40px
       & a 
         cursor: default
         text-decoration: none
+        text-shadow: 0px 0px 10px rgba(27, 22, 22, 0.78), 0px 0px 5px rgba(0, 0, 0, 0.78)
         color: $color-text-second
     &__buttons
       margin-top: 80px
@@ -65,6 +68,7 @@
       padding-top: 40px
       padding-bottom: 40px
       color: $color-text-second
+      text-shadow: 0px 0px 10px rgba(27, 22, 22, 0.78), 0px 0px 5px rgba(0, 0, 0, 0.78)
     &__input
       font-size: 18px
       border: 1px solid #007bff66
@@ -82,4 +86,54 @@
       color: $color-text-second
       width: 350px
 
-      
+@media (max-width: 1200px)
+  .callback
+    &-text
+      &__desc
+        font-size: 26px
+        +coming
+        color: $color-text-second
+        line-height: 36px
+        & a 
+          cursor: poimter
+          text-decoration: none
+          color: $color-text-second
+@media (max-width: 997px)
+  .callback
+    &-block 
+      flex-direction: column
+      justify-content: center
+      text-align: center
+    &-text 
+      display: block
+      margin: 0 auto
+      width: 80%
+      &__buttons
+        align-items: center
+        justify-content: center
+      &__button:nth-child(3)
+        margin-right: 20px
+    &-form-block
+      margin: 0 auto
+      width: 100%
+      max-width: 520px
+@media (max-width: 546px)
+  .callback
+    &-text 
+      &__desc
+        font-size: 20px
+      &__button
+        width: 300px
+    &-form-block
+      max-width: 370px
+    &-form 
+      &__title
+        width: 75%
+      &__input
+        max-width: 300px
+        padding: 10px
+        font-size: 14px
+      &__button
+        max-width: 300px
+
+    

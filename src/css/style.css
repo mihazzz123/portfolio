@@ -4235,6 +4235,51 @@ button, input:focus, button, input:hover {
 @media (max-width: 1200px) {
   .container {
     width: 96%;
+    max-width: 980px;
+  }
+}
+
+@media (max-width: 997px) {
+  .container {
+    width: 96%;
+    max-width: 750px;
+  }
+  .title {
+    width: 95%;
+    max-width: 750px;
+  }
+  .subtitle {
+    width: 95%;
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 786px) {
+  .container {
+    width: 96%;
+    max-width: 540px;
+  }
+  .title {
+    width: 95%;
+    max-width: 540px;
+  }
+  .subtitle {
+    width: 95%;
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 546px) {
+  .container {
+    width: 96%;
+  }
+  .title {
+    width: 95%;
+    max-width: 300px;
+  }
+  .subtitle {
+    width: 95%;
+    max-width: 300px;
   }
 }
 
@@ -4320,6 +4365,35 @@ button, input:focus, button, input:hover {
   color: #fff;
 }
 
+@media (max-width: 997px) {
+  .header-logo__title {
+    margin: 0;
+  }
+  .header-logo__my-name {
+    font-size: 24px;
+  }
+  .header-logo__desc {
+    font-size: 14px;
+  }
+  .header-contacts__item i {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 786px) {
+  .header-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-contacts {
+    display: none;
+  }
+}
+
 .hero {
   height: 90%;
   position: relative;
@@ -4374,7 +4448,6 @@ button, input:focus, button, input:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-right: 40px;
 }
 
 .hero-text__title {
@@ -4483,6 +4556,20 @@ button, input:focus, button, input:hover {
   }
 }
 
+@media (max-width: 786px) {
+  .hero__img {
+    max-width: 540px;
+    height: auto;
+  }
+}
+
+@media (max-width: 546px) {
+  .hero__img {
+    max-width: 300px;
+    height: auto;
+  }
+}
+
 .portfolio {
   background-color: #ececec;
 }
@@ -4520,8 +4607,8 @@ button, input:focus, button, input:hover {
           align-items: center;
   max-width: 370px;
   width: 30%;
-  position: relative;
   height: 470px;
+  position: relative;
   overflow: hidden;
   -webkit-box-shadow: 0 5px 10px 1px #bfbfbf6e;
           box-shadow: 0 5px 10px 1px #bfbfbf6e;
@@ -4617,6 +4704,44 @@ button, input:focus, button, input:hover {
 }
 
 @media (max-width: 1200px) {
+  .portfolio-card {
+    height: 500px;
+  }
+  .portfolio-card__title {
+    padding-bottom: 10px;
+  }
+  .portfolio-card__title:after {
+    bottom: 0px;
+  }
+  .portfolio-card__subtitle {
+    padding-bottom: 10px;
+  }
+  .portfolio-card__subtitle:after {
+    bottom: 60px;
+  }
+  .portfolio-card__desc {
+    display: block;
+    height: 30px;
+    position: absolute;
+    background: none;
+    margin-top: 0;
+    bottom: 30px;
+  }
+  .portfolio-card__desc-tag {
+    display: none;
+  }
+  .portfolio-card__desc-buttons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 0;
+  }
+  .portfolio-card__desc-button {
+    font-size: 16px;
+  }
+  .open-modal {
+    display: none;
+  }
   .portfolio-block {
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -4640,7 +4765,7 @@ button, input:focus, button, input:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 786px) {
   .portfolio-card {
     width: 90%;
   }
@@ -4808,6 +4933,7 @@ button, input:focus, button, input:hover {
 .callback__title {
   margin-bottom: 80px;
   color: #fff;
+  text-shadow: 0px 0px 14px rgba(0, 0, 0, 0), 0px 0px 5px black;
 }
 
 .callback-block {
@@ -4839,12 +4965,14 @@ button, input:focus, button, input:hover {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: #fff;
+  text-shadow: 0px 0px 10px rgba(27, 22, 22, 0.78), 0px 0px 5px rgba(0, 0, 0, 0.78);
   line-height: 40px;
 }
 
 .callback-text__desc a {
   cursor: default;
   text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(27, 22, 22, 0.78), 0px 0px 5px rgba(0, 0, 0, 0.78);
   color: #fff;
 }
 
@@ -4921,6 +5049,7 @@ button, input:focus, button, input:hover {
   padding-top: 40px;
   padding-bottom: 40px;
   color: #fff;
+  text-shadow: 0px 0px 10px rgba(27, 22, 22, 0.78), 0px 0px 5px rgba(0, 0, 0, 0.78);
 }
 
 .callback-form__input {
@@ -4943,6 +5072,78 @@ button, input:focus, button, input:hover {
   background: #848383cc;
   color: #fff;
   width: 350px;
+}
+
+@media (max-width: 1200px) {
+  .callback-text__desc {
+    font-size: 26px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    line-height: 36px;
+  }
+  .callback-text__desc a {
+    cursor: poimter;
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+@media (max-width: 997px) {
+  .callback-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .callback-text {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+  }
+  .callback-text__buttons {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .callback-text__button:nth-child(3) {
+    margin-right: 20px;
+  }
+  .callback-form-block {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 546px) {
+  .callback-text__desc {
+    font-size: 20px;
+  }
+  .callback-text__button {
+    width: 300px;
+  }
+  .callback-form-block {
+    max-width: 370px;
+  }
+  .callback-form__title {
+    width: 75%;
+  }
+  .callback-form__input {
+    max-width: 300px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  .callback-form__button {
+    max-width: 300px;
+  }
 }
 
 .footer {
@@ -5010,6 +5211,25 @@ button, input:focus, button, input:hover {
 .footer-contacts__item i {
   font-size: 32px;
   color: #fff;
+}
+
+@media (max-width: 786px) {
+  .footer-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .footer-contacts {
+    margin-bottom: 40px;
+  }
 }
 
 .modal {

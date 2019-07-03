@@ -70,8 +70,8 @@
     align-items: center
     max-width: 370px
     width: 30%
-    position: relative
     height: 470px
+    position: relative
     overflow: hidden
     box-shadow: 0 5px 10px 1px #bfbfbf6e
     margin-bottom: 40px
@@ -138,6 +138,32 @@
         background: #007bff99
 
 @media (max-width: 1200px)
+  .portfolio-card
+    height: 500px
+    &__title
+      padding-bottom: 10px
+      &:after
+        bottom: 0px
+    &__subtitle
+      padding-bottom: 10px
+      &:after
+        bottom: 60px
+    &__desc
+      display: block
+      height: 30px
+      position: absolute
+      background: none
+      margin-top: 0
+      bottom: 30px
+      &-tag 
+        display: none
+      &-buttons
+        justify-content: center
+        margin-top: 0
+      &-button
+        font-size: 16px
+  .open-modal
+    display: none
   .portfolio
     &-block
       justify-content: space-around
@@ -153,7 +179,7 @@
   .portfolio
     &-card 
       width: 47%
-@media (max-width: 768px)
+@media (max-width: 786px)
   .portfolio
     &-card 
       width: 90%

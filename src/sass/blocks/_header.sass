@@ -40,3 +40,23 @@
         font-size: 32px
         display: block
         color: $color-text-second
+@media (max-width: 997px)
+  .header
+    &-logo 
+      &__title
+        margin: 0
+      &__my-name
+        font-size: 24px
+      &__desc
+        font-size: 14px
+    &-contacts
+      &__item
+        i
+          font-size: 28px
+@media (max-width: 786px)
+  .header
+    &-block 
+      justify-content: center
+      align-items: center
+    &-contacts
+      display: none
