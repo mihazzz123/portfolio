@@ -4069,6 +4069,16 @@ button, input:focus, button, input:hover {
   border-radius: 50%;
 }
 
+.img_metrika {
+  width: 88px;
+  height: 31px;
+  border: 0;
+  position: fixed;
+  bottom: 20px;
+  laft: 20px;
+  opacity: 0.3;
+}
+
 @media (min-width: 1200px) {
   #go-top {
     display: block;
