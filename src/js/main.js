@@ -181,6 +181,10 @@ $(document).ready(function() {
     $('body,html').animate({scrollTop: top}, 1000);
   });
 
+
+      // Валидация
+  $('#form').validetta();
+
     //Отправка формы
     $("#main-form").submit(function() {
       $.ajax({
