@@ -130,7 +130,7 @@ $(document).ready(function() {
   });
   openModal3.click(function () {
     modal3.addClass('modal-active');
-    modal4.css({'display' : 'block'});
+    modal3.css({'display' : 'block'});
     $('body').css({'overflow' : 'hidden'});
   });
   openModal4.click(function () {
@@ -146,6 +146,15 @@ $(document).ready(function() {
       $('body').attr('style', '');
   });
 
+  $(function($) {
+    $(document).mouseup(function (e) {
+      if (!modal.is(e.target)
+      && modal.has(e.target).length === 0) {
+        modal.removeClass('modal-active');
+        $('body').attr('style', '');
+      }
+    });
+  });
 
    //Кнопка на верх
    $(window).scroll(function () { 

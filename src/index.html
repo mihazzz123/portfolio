@@ -16,6 +16,10 @@
   <title>Докучаев Михаил</title>
 </head>
 <body>
+
+  <!-- Метрика  -->
+  <!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=54316752&amp;from=informer" target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/54316752/3_1_FFFFFFFF_EFEFEFFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="54316752" data-lang="ru" /></a> <!-- /Yandex.Metrika informer --> <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(54316752, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54316752" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
   <button id="go-top"><i class="fas fa-arrow-up"></i></button>
   <header class="header">
     <div class="container">
@@ -92,7 +96,7 @@
 
 
         <div class="portfolio-card wow animated slideInUp" data-wow-delay="0.1s">
-          <img class="img portfolio-card__img" src="img/portfolio/work_1.png"></img>
+          <img alt="" class="img portfolio-card__img" src="img/portfolio/work_1.png">
           <!-- /.img portfolio-card__img -->
           <div class="portfolio-card__text">
               <strong class="portfolio-card__title">Ремонт квартир</strong>
@@ -116,7 +120,7 @@
         <!-- /.portfolio-card -->
         
         <div class="portfolio-card wow animated slideInUp" data-wow-delay="0.2s">
-          <img class="img portfolio-card__img" src="img/portfolio/work_2.png"></img>
+          <img alt="" class="img portfolio-card__img" src="img/portfolio/work_2.png">
           <!-- /.img portfolio-card__img -->
           <div class="portfolio-card__text">
               <strong class="portfolio-card__title">Изготовление макетов...</strong>
@@ -140,7 +144,7 @@
         <!-- /.portfolio-card -->
 
         <div class="portfolio-card wow animated slideInUp" data-wow-delay="0.4s">
-          <img class="img portfolio-card__img" src="img/portfolio/work_3.png"></img>
+          <img alt="" class="img portfolio-card__img" src="img/portfolio/work_3.png">
           <!-- /.img portfolio-card__img -->
           <div class="portfolio-card__text">
               <strong class="portfolio-card__title">Fussball-Heut</strong>
@@ -164,7 +168,7 @@
         <!-- /.portfolio-card -->
 
         <div class="portfolio-card wow animated slideInUp"  data-wow-delay="0.3">
-          <img class="img portfolio-card__img" src="img/portfolio/work_4.png"></img>
+          <img alt="" class="img portfolio-card__img" src="img/portfolio/work_4.png">
           <!-- /.img portfolio-card__img -->
           <div class="portfolio-card__text">
               <strong class="portfolio-card__title">Tajam</strong>
@@ -201,11 +205,11 @@
 
   <section id="callback" class="callback">
     <div class="container">
-      <h2 class="callback__title title wow animated fadeIn" data-wow-duration="1s"">Как связаться со мной?</h2>
+      <h2 class="callback__title title wow animated fadeIn" data-wow-duration="1s">Как связаться со мной?</h2>
       <!-- /.callback__title title -->
       <div class="callback-block">
         <div class="callback-text wow animated slideInLeft">
-          <span class="callback-text__desc">Вы можете написать мне в вконтакте, <br>на <a href="mailto:m.dokuchaev73@gmail.com" target='_blanck'>электронную почту</a>. <br> Можете позвонить по номеру - <a href="call:+7(912)362-04-81"><br>+7(912) 362-04-81</a> или написатьв мессенджеры Whatsapp, Telegram, Viber. Либо оставте заявку на сайте.</span>
+          <span class="callback-text__desc">Вы можете написать мне в вконтакте, <br>на <a href="mailto:m.dokuchaev73@gmail.com" target="blanck">электронную почту</a>. <br> Можете позвонить по номеру - <a href="call:+7(912)362-04-81"><br>+7(912) 362-04-81</a> или написатьв мессенджеры Whatsapp, Telegram, Viber. Либо оставте заявку на сайте.</span>
           <!-- /.callback-text__desc -->
           <div class="callback-text__buttons">
             <a href="https://vk.com/gim_bar" target="blank" class="callback-text__button button">Я в ВК</a>
@@ -221,15 +225,18 @@
         </div>
         <!-- /.callback-text -->
         <div class="callback-form-block wow animated slideInRight">
-          <form action="#" class="callback-form" id="form">
+
+          <form method="POST" class="callback-form" id="form" onsubmit="ym(54316752, 'reachGoal', 'form'); return true;">
+
             <span class="callback-form__title">Оставте заявку, и я свяжусь с вами.</span>
-            <input type="text" name="userName" placeholder="Ваше имя" class="callback-form__input">
-            <input type="email" name="email" placeholder="Ваша почта" class="callback-form__input">
-            <textarea type="text" name="description"  class="callback-form__input callback-form__textarea textarea"></textarea>
-            <button class="button callback-form__button">Отправить заявку</button>
+            <input type="text" name="userName" placeholder="Ваше имя" class="callback-form__input" data-validetta="required,minLength[2],maxLength[15]">
+            <input type="email" name="email" placeholder="Ваша почта" class="callback-form__input" data-validetta="required,email">
+            <textarea name="description"  class="callback-form__input callback-form__textarea textarea" data-validetta="required"></textarea>
+            <button type="submit" id="btn_form" class="button callback-form__button">Отправить заявку</button>
             <!-- /.button callback-form__button -->
           </form>
           <!-- /#form.callback-form -->
+
         </div>
         <!-- /.callback-form-block -->
       </div>
@@ -267,9 +274,9 @@
 
   <section class="modal modal_1">
     <div class="modal-block">
-      <buttom class="modal__close-btn close"><i class="fas fa-times"></i></buttom>
+      <button class="modal__close-btn close"><i class="fas fa-times"></i></button>
 
-      <img src="img/modal/mockuper_1.png" alt="" class="modal-block__img ">
+      <img src="img/modal/mockuper_1.webp" alt="" class="modal-block__img ">
 
       <div class="modal-text">
         <h2 class="modal-text__title">Ремонт квартир</h2>
@@ -305,9 +312,9 @@
 
   <section class="modal modal_2">
     <div class="modal-block">
-      <buttom class="modal__close-btn close"><i class="fas fa-times"></i></buttom>
+      <button class="modal__close-btn close"><i class="fas fa-times"></i></button>
 
-      <img src="img/modal/mockuper_2.png" alt="" class="modal-block__img ">
+      <img src="img/modal/mockuper_2.webp" alt="" class="modal-block__img ">
 
       <div class="modal-text">
         <h2 class="modal-text__title">Изготовление макетов любой сложности</h2>
@@ -343,9 +350,9 @@
 
   <section class="modal modal_3">
     <div class="modal-block">
-      <buttom class="modal__close-btn close"><i class="fas fa-times"></i></buttom>
+      <button class="modal__close-btn close"><i class="fas fa-times"></i></button>
 
-      <img src="img/modal/mockuper_3.png" alt="" class="modal-block__img ">
+      <img src="img/modal/mockuper_3.webp" alt="" class="modal-block__img ">
 
       <div class="modal-text">
         <h2 class="modal-text__title">Fussball-Heut</h2>
@@ -381,9 +388,9 @@
 
   <section class="modal modal_4">
     <div class="modal-block">
-      <buttom class="modal__close-btn close"><i class="fas fa-times"></i></buttom>
+      <button class="modal__close-btn close"><i class="fas fa-times"></i></button>
 
-      <img src="img/modal/mockuper_4.png" alt="" class="modal-block__img ">
+      <img src="img/modal/mockuper_4.webp" alt="" class="modal-block__img ">
 
       <div class="modal-text">
         <h2 class="modal-text__title">Tajam</h2>
@@ -421,7 +428,7 @@
   <script src="js/jquery-migrate-1.2.1.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/wow.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.min.js"></script>
 
 </body>
 </html>
